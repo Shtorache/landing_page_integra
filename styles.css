@@ -1,0 +1,288 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Banner */
+.banner {
+    background-image: url('DSC01107.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+
+body {
+    
+    color: #333;
+    line-height: 1.6;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content p {
+    font-size: 1.5em;
+    color: #fff;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Seções comuns */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.melhores h2, .entregas h2, .pra-quem h2, .cta h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.melhores h2::after, .entregas h2::after, .pra-quem h2::after, .cta h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #ff6200;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+/* Ícones e legendas */
+.icones {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.icone {
+    width: 300px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icone img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #ff6200;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.icone img:hover {
+    transform: scale(1.1);
+}
+
+.icones .icone-texto {
+    font-size: 1.2em; /* Tamanho da fonte desejado */
+    color: rgb(223, 31, 31); /* Cor do texto */
+    margin-top: 15px; /* Margem acima do texto */
+    transition: color 0.3s ease; /* Transição suave para alterações de cor */
+    font-weight: bold;
+}
+
+.icone:hover .icone-texto {
+    color: #ff6200; /* Muda a cor do texto ao passar o mouse sobre o ícone */
+}
+
+/* Listas de entrega */
+.entregas ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.entregas li {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Call to Action */
+.cta {
+    background-color: #ff6200;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.cta button {
+    background-color: #fff;
+    color: #ff6200;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #ff7b33;
+    color: #fff;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.5em;
+    }
+
+    .banner-content p {
+        font-size: 1.2em;
+    }
+
+    .icones {
+        flex-direction: column;
+        align-items: center; /* Centraliza os ícones */
+    }
+
+    .icone {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.entregas {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Cor de fundo do banner */
+    border: 2px solid #ff6200; /* Borda para o banner */
+    border-radius: 10px; /* Cantos arredondados */
+    margin: 20px; /* Margem para espaçamento */
+}
+
+.entregas h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column; /* Organiza as opções em coluna */
+    align-items: center; /* Centraliza as opções */
+}
+
+.opcao {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 10px 0; /* Margem entre as opções */
+    font-size: 1.3em;
+    color: #fff; /* Cor do texto */
+    background-color: #ff6200; /* Cor de fundo das opções */
+    border-radius: 30px; /* Cantos arredondados */
+    text-decoration: none; /* Remove o sublinhado do link */
+    transition: background-color 0.3s ease; /* Transição para hover */
+}
+
+.opcao:hover {
+    background-color: #ff7b33; /* Cor de fundo ao passar o mouse */
+}
+
+.pra-quem {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 2px solid #ff6200; /* Borda opcional para o banner */
+    border-radius: 10px; /* Cantos arredondados */
+    margin: 20px; /* Margem para espaçamento */
+}
+
+.icones-pra-quems {
+    display: flex;
+    justify-content: space-around; /* Espaçamento igual entre os ícones */
+    flex-wrap: wrap; /* Permite que os ícones se movam para a próxima linha se necessário */
+    margin-top: 30px; 
+}
+
+.ico-pra-quems {
+    display: inline-block; /* Permite que os ícones sejam exibidos em linha */
+    margin: 10px; /* Espaçamento entre os ícones */
+}
+
+.ico-pra-quems img {
+    width: 80px; /* Tamanho dos ícones */
+    height: 80px;
+    border-radius: 50%; /* Torna os ícones circulares */
+    transition: transform 0.3s ease; /* Transição suave para hover */
+}
+
+.ico-pra-quems:hover img {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+
+.cta {
+    position: fixed; /* Fixa o footer ao final da tela */
+    bottom: 0; /* Fixa na parte inferior */
+    left: 0;
+    right: 0;
+    background-color: #ff6200; /* Cor de fundo */
+    color: #fff;
+    padding: 1px 20px; /* Reduz a altura do padding para ficar mais compacto */
+    text-align: center;
+    z-index: 1000; /* Garante que o footer fique por cima de outros elementos */
+}
+
+.cta h2 {
+    font-size: 1.0em; /* Diminui o tamanho do texto */
+    margin-bottom: 10px; /* Menor espaçamento para um layout mais compacto */
+}
+
+.cta button {
+    background-color: #fff;
+    color: #ff6200;
+    border: none;
+    padding: 5px 10px; /* Ajusta o tamanho do botão */
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #ff7b33;
+    color: #fff;
+}
+
+
+
